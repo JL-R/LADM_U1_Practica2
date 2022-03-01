@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <ImageView
+        android:layout_width="359dp"
+        android:layout_height="258dp"
+        android:layout_gravity="center"
+        android:src="@drawable/dinero" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido al Crustáceo Cascarudo"
+        android:textSize="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:textStyle="bold"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acerca de"
+        android:id="@+id/acercade"
+        android:layout_gravity="bottom|center"
+        android:paddingHorizontal="80dp"
+        android:paddingVertical="20dp"
+        android:layout_marginBottom="100dp"/>
+</FrameLayout>

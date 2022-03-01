@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@drawable/registro"
+    tools:context=".ui.gallery.GalleryFragment">
+
+
+    <TableRow>
+        <TextView android:text="ORDEN :" android:textColor="@color/white" android:textAlignment="textEnd"/>
+        <EditText android:ems="11" android:id="@+id/pedido" android:textColor="@color/white"/>
+    </TableRow>
+    <TableRow>
+        <TextView android:text="INGREDIENTES :" android:textColor="@color/white" android:textAlignment="textEnd"/>
+        <EditText android:ems="11" android:id="@+id/ingrediente" android:textColor="@color/white"/>
+    </TableRow>
+    <TableRow>
+        <TextView android:text="NOMBRE CLIENTE: " android:textColor="@color/white" android:textAlignment="textEnd"/>
+        <EditText android:ems="11" android:id="@+id/nombrecliente" android:textColor="@color/white"/>
+    </TableRow>
+    <TableRow>
+        <TextView android:text="PRECIO: " android:textColor="@color/white" android:textAlignment="textEnd"/>
+        <EditText android:inputType="number" android:id="@+id/precio" android:textColor="@color/white"/>
+    </TableRow>
+    <TableRow android:layout_marginTop="40dp" android:paddingHorizontal="40dp">
+        <Button android:text="Registrar" android:id="@+id/registrar" android:layout_weight="1" />
+    </TableRow>
+    <TableRow android:paddingHorizontal="40dp">
+        <Button android:text="Leer" android:id="@+id/leer" android:layout_weight="1"/>
+    </TableRow>
+
+</TableLayout>
