@@ -28,7 +28,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ejemplo"
+            android:text="titulo"
             android:textColor="@color/white"
             android:id="@+id/item_title"
             android:textStyle="bold"
@@ -41,11 +41,41 @@
             android:layout_height="wrap_content"
             android:text="Detalles"
             android:textColor="@color/white"
-            android:id="@+id/item_detal"
+            android:id="@+id/item_nombre"
             android:textStyle="bold"
             android:layout_toRightOf="@+id/item_image"
             android:layout_toEndOf="@+id/item_image"
             android:layout_below="@id/item_title"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cliente"
+            android:textColor="@color/white"
+            android:id="@+id/item_cliente"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/item_nombre"
+            android:layout_toEndOf="@+id/item_image"
+            android:layout_below="@id/item_nombre"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="precio"
+            android:textColor="@color/white"
+            android:id="@+id/item_precio"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/item_nombre"
+            android:layout_toEndOf="@+id/item_image"
+            android:layout_below="@id/item_cliente"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ingredientes"
+            android:textColor="@color/white"
+            android:id="@+id/item_ingredientes"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/item_cliente"
+            android:layout_toEndOf="@+id/item_nombre"
+            android:layout_below="@id/item_cliente"/>
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

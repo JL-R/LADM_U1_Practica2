@@ -1,5 +1,6 @@
 package mx.tecnm.tepic.ladm_u1_practica2_almacenamientoarchivosplanos
 
+import android.provider.ContactsContract
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,22 +9,24 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 
-class CustomAdapter: RecyclerView.Adapter<CustomAdapter.ViewHolder>(){
-        val titles= arrayOf("codelia",
+class CustomAdapter(private val data:List<Data>) : RecyclerView.Adapter<CustomAdapter.ViewHolder>(){
+        /*val titles= arrayOf("codelia",
             "suscribete",
             "videos",
             "youtube")
+
 
         val details= arrayOf("muchos videos nuevos",
             "kotlin",
             "mas videos",
             "gran cantidad de videos")
-
+        */
+    /*
         val images = intArrayOf(R.drawable.ic_launcher_foreground,
             R.drawable.ic_launcher_foreground,
             R.drawable.ic_launcher_foreground,
             R.drawable.ic_launcher_foreground,
-        )
+        )*/
 
         override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
             val v= LayoutInflater.from(viewGroup.context).inflate(R.layout.card_layout, viewGroup, false)
@@ -31,23 +34,25 @@ class CustomAdapter: RecyclerView.Adapter<CustomAdapter.ViewHolder>(){
         }
 
         override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
-            viewHolder.itemTitle.text= titles[i]
-            viewHolder.itemDetail.text= details[i]
-            viewHolder.itemImage.setImageResource(images[i])
+            val item= data[i]
+            viewHolder.render(item)
         }
 
         override fun getItemCount(): Int {
-            return titles.size
+            return data.size
         }
         inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-            var itemImage: ImageView
-            var itemTitle: TextView
-            var itemDetail: TextView
+            var itemImage = itemView.findViewById<ImageView>(R.id.item_image)
+            var itemNombre = itemView.findViewById<TextView>(R.id.item_nombre)
+            var itemCliente = itemView.findViewById<TextView>(R.id.item_cliente)
+            var itemPrecio = itemView.findViewById<TextView>(R.id.item_precio)
+            var itemIngredientes = itemView.findViewById<TextView>(R.id.item_ingredientes)
 
-            init {
-                itemImage= itemView.findViewById(R.id.item_image)
-                itemTitle= itemView.findViewById(R.id.item_title)
-                itemDetail= itemView.findViewById(R.id.item_detal)
+            fun render(textos: Data) {
+                itemNombre.text = textos.nombre
+                itemCliente.text = textos.cliente
+                itemIngredientes.text = textos.ingredientes
+                itemPrecio.text = textos.precio.toString()
             }
         }
 }
